@@ -11,13 +11,10 @@ sub calc{
     my $mul = $left * $right;
     my $div = $left / $right;
 
-
     return($add,$min,$mul,$div);
 }
 
-
 my($add,$min,$mul,$div) = calc(10,2);
-
 
 print "add = ".$add,"\n";
 print "min = ".$min,"\n";
