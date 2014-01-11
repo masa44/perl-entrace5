@@ -13,12 +13,14 @@ sub calc_string {
 
     return undef if !$string;
 
-    if($string =~ /(-?\d*) (\+|\-|\*|\/|\%) (-?\d*)/){
+    if($string =~ /(-?\d+) (\+|\-|\*|\/|\%) (-?\d+)/){
         return ($1 + $3) if $2 eq '+';
-        return ($1 - $3) if($2 eq '-');
-        return ($1 * $3) if($2 eq '*');
-        return ($1 / $3) if($2 eq '/');
-        return ($1 % $3) if($2 eq '%');
+        return ($1 - $3) if $2 eq '-';
+        return ($1 * $3) if $2 eq '*';
+        return ($1 / $3) if $2 eq '/';
+        return ($1 % $3) if $2 eq '%';
     }
+
+    return undef;
 }
 
