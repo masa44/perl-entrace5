@@ -1,11 +1,12 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
+use DDP;
 
 my @files = qw/papix.pl moznion.pm macopy.py boolfool.vim/;
 
-print "@{map_bak( \@files )}\n";
-print "@{grep_pl_or_pm( \@files )}\n";
+p map_bak(\@files);
+p grep_pl_or_pm(\@files);
 
 sub map_bak {
     my $files_ref = shift;
